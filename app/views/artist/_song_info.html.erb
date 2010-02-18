@@ -1,9 +1,9 @@
-  <tr>
+   <tr>
     <th scope="col"><%= song.id %></th>
     <td><%= song.track %></td>
     <td><%= song.title %></td>
     <td><%= song.album %></td>
-    <!-- td><%= song.artist%></td -->
-    <td><%= link_to song.artist, :controller => "artist", :action => "view", :artist => song.artist %></td>
+    <td><%= song.artist%></td>
     <td><%= song.path %></td>
   </tr>
+ 

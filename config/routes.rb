@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   # The priority is based upon order of creation: first created -> highest priority.
 
   # curtiscu custom routes
+  map.connect '/artist', :controller => 'artist', :action => 'index'
   map.connect '/songs', :controller => 'songs', :action => 'index'
   map.connect '/:id', :controller => 'songs', :action => 'view'
 

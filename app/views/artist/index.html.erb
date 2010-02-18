@@ -1,0 +1,28 @@
+<h1>Artist#index</h1>
+<p>Find me in app/views/artist/index.html.erb</p>
+
+
+
+<p>Showing list of all artists</p>
+
+<!-- ARTISTS TABLE -->
+
+<p>
+<table align=center border=1 summary="ARTISTS" >
+  <caption>Artist in the DB</caption>
+  <thead>
+    <tr>
+      <!-- th id="id" scope="col">ID#</th -->
+      <th id="ar" scope="col">ARTIST</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="2">Table Footer, so this is.</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <%= render :partial => "artists", :collection => @artists, :as => :artist %>
+  </tbody>
+</table>
+</p>

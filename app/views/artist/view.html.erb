@@ -1,0 +1,53 @@
+<h1>Artist#view (by curtiscu)</h1>
+<p>Find me in app/views/artist/view.html.erb</p>
+
+<p>Showing catalog for artist: <%= @artist %>
+
+<!-- ALBUMS TABLE -->
+
+<p>
+<table align=center border=1 summary="Albums by artist: <%= @artist %>" >
+  <caption>Artist albums in the DB</caption>
+  <thead>
+    <tr>
+      <th id="al" scope="col">ALBUM</th>
+      <th id="ar" scope="col">ARTIST</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="6">Table Footer, so this is.</td>
+    </tr>
+  </tfoot>
+  <tbody>
+<%= render :partial => "album_info", :collection => @albums, :as => :album %>
+  </tbody>
+</table>
+</p>
+
+
+<!-- SONGS TABLE -->
+
+<p>
+<table align=center border=1 summary="Songs by artist: <%= @artist %>" >
+  <caption>Artist songs in the DB</caption>
+  <thead>
+    <tr>
+      <th id="id" scope="col">ID#</th>
+      <th id="tr" scope="col">TRACK#</th>
+      <th id="ti" scope="col">TITLE</th>
+      <th id="al" scope="col">ALBUM</th>
+      <th id="ar" scope="col">ARTIST</th>
+      <th id="pa" scope="col">PATH</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="6">Table Footer, so this is.</td>
+    </tr>
+  </tfoot>
+  <tbody>
+<%= render :partial => "song_info", :collection => @songs, :as => :song %>
+  </tbody>
+</table>
+</p>

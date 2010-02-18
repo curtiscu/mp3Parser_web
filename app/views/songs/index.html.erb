@@ -11,7 +11,9 @@
   <%= link_to "<<" , :controller => "songs", :action => "index", :pg => @page_to_render-1 %>
   <%= link_to ">>" , :controller => "songs", :action => "index", :pg => @page_to_render+1 %>
 </p>
-<table border=1 summary="Page <%= @page_to_render %> of <%= @table_count/SongsController::RECORDS_PER_PAGE %>" >
+<p>
+
+<table align=center border=1 summary="Page <%= @page_to_render %> of <%= @table_count/SongsController::RECORDS_PER_PAGE %>" >
   <caption>Songs in the DB</caption>
   <thead>
     <tr>
@@ -32,3 +34,4 @@
 <%= render :partial => "song_info", :collection => @songs, :as => :song %>
   </tbody>
 </table>
+</p>

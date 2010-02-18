@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
 
-  RECORDS_PER_PAGE = 15
+  RECORDS_PER_PAGE = 30
     
   def view
     @show_song = params[:id].nil? ? "no song" : Song.find(params[:id]).title
