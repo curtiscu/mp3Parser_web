@@ -1,4 +1,4 @@
-class ArtistController < ApplicationController
+class ArtistController < CurtisAppController
 
   def view
   
@@ -14,7 +14,9 @@ class ArtistController < ApplicationController
   end
   
   def index
-    @artists=Song.find(:all, :select => "artist", :group => "artist")
+    # @artists=Song.find(:all, :select => "artist", :group => "artist")
+    # @users = User.paginate :page => params[:page], :order => 'name'
+    @artists=Song.paginate :page => params[:page], :select => "artist", :group => "artist", :order => 'artist'
   end
 
 end

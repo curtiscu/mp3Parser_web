@@ -1,12 +1,25 @@
+
+<% content_for :head do %>
+<!-- test dropping stuff in <head> tag -->
+<% end %>
+
+
+<% content_for :header_inside_container do %>
+<p>~~~~container header stuff in artist index view~~~~</p>
+<% end %>
+
+<% content_for :footer_inside_container do %>
+<p>~~~~container footer stuff in artist index view~~~~</p>
+<% end %>
+
 <h1>Artist#index</h1>
 <p>Find me in app/views/artist/index.html.erb</p>
-
-
 
 <p>Showing list of all artists</p>
 
 <!-- ARTISTS TABLE -->
 
+<%= will_paginate @artists %>
 <p>
 <table align=center border=1 summary="ARTISTS" >
   <caption>Artist in the DB</caption>
@@ -26,3 +39,5 @@
   </tbody>
 </table>
 </p>
+
+<%= will_paginate @artists %>

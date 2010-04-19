@@ -1,11 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-  <head> 
-    <title><%= title %></title>     
-    <%= stylesheet_link_tag 'songs_table', :media => 'screen' %>
-  </head> 
-  <body> 
-    <%= yield %> 
-  </body> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><%= title %></title>    
+    <%= render 'layouts/stylesheets' %> <!-- populated by views/layouts/_stylesheets.html.erb -->
+    <%= yield :head %> <!-- # so yield file can add stuff to 'head' tag -->
+  </head>
+  <body>
+    <div class="container">
+      <%= render 'layouts/header' %> <!-- #populated by views/layouts/_header.html.erb -->
+      <%= yield :header_inside_container %> <!-- #populated by "content_for" in yield file -->
+      <div class=”left sidebar”> 
+        <%= yield :left_sidebar %> 
+      </div> 
+
+      <div id="content" class="round">
+        <%= yield %>
+      </div>
+      
+      <div class=”right sidebar”> 
+        <%= yield :right_sidebar %> 
+      </div> 
+      
+      <%= yield :footer_inside_container %> <!-- #populated by "content_for" in yield file -->
+      <%= render 'layouts/footer' %> <!-- #populated by views/layouts/_footer.html.erb -->
+    </div>
+  </body>
 </html> 
