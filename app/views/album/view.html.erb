@@ -1,15 +1,12 @@
-<h1>Songs#index (by curtiscu)</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1>Album#view</h1>
+<p>Find me in app/views/album/view.html.erb</p>
 
-<p>Showing a list of songs here.</p>
+<p>Showings songs in album: <%= @album %> </p>
+<!-- SONGS TABLE -->
 
-<hr />
-<%= will_paginate @songs %>
-<hr />
 <p>
-
-<table align=center border=1 summary="Page blah" >
-  <caption>Songs in the DB</caption>
+<table align=center border=1 summary="Songs in aalbum: <%= @album %>" >
+  <caption>Album songs in the DB</caption>
   <thead>
     <tr>
       <th id="id" scope="col">ID#</th>
@@ -29,9 +26,3 @@
 <%= render :partial => "layouts/song_info", :collection => @songs, :as => :song %>
   </tbody>
 </table>
-
-<hr />
-<%= will_paginate @songs %>
-<hr />
-
-</p>

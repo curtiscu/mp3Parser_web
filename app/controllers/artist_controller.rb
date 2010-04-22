@@ -14,9 +14,13 @@ class ArtistController < CurtisAppController
   end
   
   def index
+  
+    # the old way
     # @artists=Song.find(:all, :select => "artist", :group => "artist")
-    # @users = User.paginate :page => params[:page], :order => 'name'
-    @artists=Song.paginate :page => params[:page], :select => "artist", :group => "artist", :order => 'artist'
+    
+    # the new paginated way
+    @artists=Song.paginate :page => params[:page], :per_page => 50, :select => "artist", :group => "artist", :order => 'artist'
+    
   end
 
 end

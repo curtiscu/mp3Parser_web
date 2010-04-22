@@ -1,0 +1,34 @@
+<h1>Album#index</h1>
+<p>Find me in app/views/album/index.html.erb</p>
+
+
+<hr />
+<%= will_paginate @albums %>
+<hr />
+
+<!-- ALBUMS TABLE -->
+
+<p>
+<table align=center border=1 summary="Albums" >
+  <caption>Albums in the DB</caption>
+  <thead>
+    <tr>
+      <th id="al" scope="col">ALBUM</th>
+      <th id="ar" scope="col">ARTIST</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="6">Table Footer, so this is.</td>
+    </tr>
+  </tfoot>
+  <tbody>
+<%= render :partial => "artist/album_info", :collection => @albums, :as => :album %>
+  </tbody>
+</table>
+</p>
+
+<hr />
+<%= will_paginate @albums %>
+<hr />
+

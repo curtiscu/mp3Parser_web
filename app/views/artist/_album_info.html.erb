@@ -1,5 +1,8 @@
   <tr>
-    <td><%= album.album %></td>
-    <td><%= album.artist%></td>
+    
+    <td><%= link_to album.album, :controller => "album", :action => "view", :album => album.album %></td>
+    <td><%= link_to album.artist, :controller => "artist", :action => "view", :artist => album.artist %></td>
+    
   </tr>
+ 
  

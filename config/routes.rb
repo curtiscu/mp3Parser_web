@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   # curtiscu custom routes
   map.connect '/artist', :controller => 'artist', :action => 'index'
   map.connect '/songs', :controller => 'songs', :action => 'index'
-  map.connect '/:id', :controller => 'songs', :action => 'view'
+  map.connect '/album', :controller => 'album', :action => 'index'
 
  
 
