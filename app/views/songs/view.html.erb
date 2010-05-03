@@ -24,5 +24,22 @@
     <tr><td>ARTIST</td><td><%= @show_song.artist %></td></tr>
     <tr><td>PATH</td><td><%= @show_song.path %></td></tr>
     <tr><td>EXISTS</td><td><%= File.exist?(@show_song.path) %></td></tr>
+    <tr><td>READABLE</td><td>
+      <%= 
+        if File.exist?(@show_song.path) 
+          File.stat(@show_song.path).readable? 
+        else
+          "n/a"
+        end
+      %></td></tr>    
+    <tr><td>WRITABLE</td><td>
+      <%= 
+        if File.exist?(@show_song.path) 
+          File.stat(@show_song.path).writable_real? 
+        else
+          "n/a"
+        end
+      %></td></tr>    
+    
   </tbody>
 </table>
