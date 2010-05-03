@@ -65391,3 +65391,3586 @@ Rendered layouts/_header (1.7ms)
 Rendered layouts/_sidebar (0.8ms)
 Rendered layouts/_footer (0.1ms)
 Completed in 7ms (View: 5, DB: 0) | 200 OK [http://192.168.226.128/songs/view?title=I+Can+See+For+Miles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-02 17:34:14) [GET]
+  Parameters: {"title"=>"I Can See For Miles"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (9.5ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://192.168.120.130/songs/view?title=I+Can+See+For+Miles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#index (for 192.168.120.1 at 2010-05-02 17:34:19) [GET]
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT artist FROM `songs` GROUP BY artist ORDER BY artist LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all, artist AS artist FROM `songs` GROUP BY artist [0m
+Rendering template within layouts/application
+Rendering artist/index
+Rendered artist/_artists (2.1ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.7ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.7ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 53ms (View: 36, DB: 1) | 200 OK [http://192.168.120.130/artist]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-02 17:34:22) [GET]
+  Parameters: {"artist"=>"Ac Dc"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Ac Dc') [0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Ac Dc') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (4.5ms)
+Rendered layouts/_song_info (1.6ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://192.168.120.130/artist/view?artist=Ac+Dc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-02 17:34:25) [GET]
+  Parameters: {"album"=>"The Rolling Stone Magazines 50"}
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = 'The Rolling Stone Magazines 50') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (3.7ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (3.3ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.7ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (20.4ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.6ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 671ms (View: 660, DB: 2) | 200 OK [http://192.168.120.130/album/view?album=The+Rolling+Stone+Magazines+50]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-02 18:51:07) [GET]
+  Parameters: {"album"=>"The Rolling Stone Magazines 50"}
+  [4;36;1mSong Load (1.7ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = 'The Rolling Stone Magazines 50') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (17.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (2.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (82.3ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.6ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (82.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.7ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_sidebar (1.6ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 814ms (View: 751, DB: 4) | 200 OK [http://192.168.120.130/album/view?album=The+Rolling+Stone+Magazines+50]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-02 18:51:23) [GET]
+  Parameters: {"artist"=>"Bob Dylan"}
+  [4;36;1mSong Load (12.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Bob Dylan') [0m
+  [4;35;1mSong Load (36.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Bob Dylan') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (4.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.7ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 160ms (View: 106, DB: 49) | 200 OK [http://192.168.120.130/artist/view?artist=Bob+Dylan]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-02 18:52:00) [GET]
+  Parameters: {"title"=>"Positively 4Th Street"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://192.168.120.130/songs/view?title=Positively+4Th+Street]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 18:52:24) [GET]
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM `songs` ORDER BY title LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (2.6ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 77ms (View: 69, DB: 1) | 200 OK [http://192.168.120.130/songs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#index (for 192.168.120.1 at 2010-05-02 18:52:29) [GET]
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT album,artist FROM `songs` GROUP BY album ORDER BY album LIMIT 0, 50[0m
+  [4;35;1mSong Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all, album AS album FROM `songs` GROUP BY album [0m
+Rendering template within layouts/application
+Rendering album/index
+Rendered artist/_album_info (2.8ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.9ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.5ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.9ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (1.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 69ms (View: 55, DB: 1) | 200 OK [http://192.168.120.130/album]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-02 18:52:37) [GET]
+  Parameters: {"artist"=>"The Stone Roses"}
+  [4;35;1mSong Load (8.3ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'The Stone Roses') [0m
+  [4;36;1mSong Load (30.4ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'The Stone Roses') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.5ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 88ms (View: 43, DB: 40) | 200 OK [http://192.168.120.130/artist/view?artist=The+Stone+Roses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-02 18:53:21) [GET]
+  Parameters: {"album"=>"1st"}
+  [4;36;1mSong Load (30.3ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = '1st') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (3.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 57ms (View: 21, DB: 31) | 200 OK [http://192.168.120.130/album/view?album=1st]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-02 18:54:18) [GET]
+  Parameters: {"album"=>"1st"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = '1st') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (6.9ms)
+Rendered layouts/_song_info (2.6ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 37ms (View: 29, DB: 1) | 200 OK [http://192.168.120.130/album/view?album=1st]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-02 19:03:10) [GET]
+  Parameters: {"album"=>"1st"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = '1st') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.5ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (9.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 35ms (View: 29, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=1st]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#index (for 192.168.120.1 at 2010-05-02 19:03:40) [GET]
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT artist FROM `songs` GROUP BY artist ORDER BY artist LIMIT 0, 50[0m
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all, artist AS artist FROM `songs` GROUP BY artist [0m
+Rendering template within layouts/application
+Rendering artist/index
+Rendered artist/_artists (2.8ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.8ms)
+Rendered artist/_artists (0.8ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.6ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 62ms (View: 47, DB: 1) | 200 OK [http://ubuntuserver/artist]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 19:03:46) [GET]
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM `songs` ORDER BY title LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (3.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 66ms (View: 58, DB: 1) | 200 OK [http://ubuntuserver/songs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 19:04:19) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSong Load (13.7ms)[0m   [0;1mSELECT * FROM `songs` ORDER BY title LIMIT 50, 50[0m
+  [4;35;1mSong Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (2.6ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 90ms (View: 67, DB: 15) | 200 OK [http://ubuntuserver/songs?page=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 19:27:54) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` ORDER BY title LIMIT 50, 50[0m
+  [4;36;1mSong Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (84.7ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 161ms (View: 152, DB: 2) | 200 OK [http://ubuntuserver/songs?page=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-02 19:28:15) [GET]
+  Parameters: {"title"=>"(I Am) What I Am Not", "id"=>"1527"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://ubuntuserver/songs/view/1527?title=%28I+Am%29+What+I+Am+Not]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 19:28:29) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` ORDER BY title LIMIT 50, 50[0m
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (2.7ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 74ms (View: 67, DB: 1) | 200 OK [http://ubuntuserver/songs?page=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 19:29:26) [GET]
+  Parameters: {"page"=>"3"}
+  [4;35;1mSong Load (13.6ms)[0m   [0mSELECT * FROM `songs` ORDER BY title LIMIT 100, 50[0m
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (3.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (3.7ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 104ms (View: 79, DB: 15) | 200 OK [http://ubuntuserver/songs?page=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-02 19:29:30) [GET]
+  Parameters: {"title"=>"(What's So Funny 'bout) Peace, Love And Understanding", "id"=>"1024"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.9ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://ubuntuserver/songs/view/1024?title=%28What%27s+So+Funny+%27bout%29+Peace%2C+Love+And+Understanding]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 19:30:00) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` ORDER BY title LIMIT 100, 50[0m
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (3.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 71ms (View: 64, DB: 1) | 200 OK [http://ubuntuserver/songs?page=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (24.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-02 19:30:06) [GET]
+  Parameters: {"title"=>"(What's So Funny 'bout) Peace, Love And Understanding"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.2ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 8ms (View: 5, DB: 25) | 200 OK [http://ubuntuserver/songs/view?title=%28What%27s+So+Funny+%27bout%29+Peace%2C+Love+And+Understanding]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 20:09:24) [GET]
+  Parameters: {"page"=>"3"}
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM `songs` ORDER BY title LIMIT 100, 50[0m
+  [4;36;1mSong Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (3.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.4ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 78ms (View: 69, DB: 2) | 200 OK [http://ubuntuserver/songs?page=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 20:09:38) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` ORDER BY title LIMIT 100, 50[0m
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (2.6ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.7ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.6ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (80.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.6ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 155ms (View: 148, DB: 1) | 200 OK [http://ubuntuserver/songs?page=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-02 20:09:51) [GET]
+  Parameters: {"title"=>"36D"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://ubuntuserver/songs/view?title=36D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-02 20:10:00) [GET]
+  Parameters: {"artist"=>"Idlewild"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Idlewild') [0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Idlewild') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.9ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (2.5ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.2ms)
+Rendered layouts/_sidebar (0.9ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 81ms (View: 74, DB: 1) | 200 OK [http://ubuntuserver/artist/view?artist=Idlewild]
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-02 23:29:38) [GET]
+  [4;36;1mSong Load (1.9ms)[0m   [0;1mSELECT * FROM `songs` ORDER BY title LIMIT 0, 50[0m
+  [4;35;1mSong Columns (10.4ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (5.1ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.4ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (14.2ms)
+Rendered layouts/_sidebar (3.9ms)
+Rendered layouts/_footer (0.9ms)
+Completed in 197ms (View: 173, DB: 16) | 200 OK [http://ubuntuserver/songs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#index (for 192.168.120.1 at 2010-05-02 23:29:50) [GET]
+  [4;35;1mSong Load (0.6ms)[0m   [0mSELECT artist FROM `songs` GROUP BY artist ORDER BY artist LIMIT 0, 50[0m
+  [4;36;1mSong Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all, artist AS artist FROM `songs` GROUP BY artist [0m
+Rendering template within layouts/application
+Rendering artist/index
+Rendered artist/_artists (3.1ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (1.5ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (1.0ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (2.1ms)
+Rendered artist/_artists (0.9ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (1.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.5ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.7ms)
+Rendered artist/_artists (0.3ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (3.8ms)
+Rendered layouts/_sidebar (1.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 156ms (View: 56, DB: 3) | 200 OK [http://ubuntuserver/artist]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#index (for 192.168.120.1 at 2010-05-02 23:29:58) [GET]
+  [4;36;1mSong Load (0.4ms)[0m   [0;1mSELECT album,artist FROM `songs` GROUP BY album ORDER BY album LIMIT 0, 50[0m
+  [4;35;1mSong Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all, album AS album FROM `songs` GROUP BY album [0m
+Rendering template within layouts/application
+Rendering album/index
+Rendered artist/_album_info (3.0ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.9ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 72ms (View: 58, DB: 2) | 200 OK [http://ubuntuserver/album]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 01:14:58) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;35;1mSong Load (0.8ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (101.7ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.5ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 123ms (View: 113, DB: 3) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 01:16:31) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (5.0ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 01:16:49) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (5.3ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:16:53) [GET]
+  Parameters: {"title"=>"554"}
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://ubuntuserver/songs/view?title=554]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 01:18:38) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.6ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:18:40) [GET]
+  Parameters: {"title"=>"554"}
+  [4;35;1mSong Load (2.6ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` IS NULL) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (1.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 13ms (View: 6, DB: 3) | 200 OK [http://ubuntuserver/songs/view?title=554]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 01:19:33) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.7ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:19:36) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Load (3.9ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = '554') [0m
+Rendering template within layouts/application
+Rendering songs/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 16ms (View: 7, DB: 5) | 200 OK [http://ubuntuserver/songs/view/554]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:42:27) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = '554') [0m
+  [4;35;1mSong Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+
+NameError (undefined local variable or method `null' for #<SongsController:0x7f5449528d58>):
+  app/controllers/songs_controller.rb:7:in `view'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:42:42) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = '554') [0m
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+
+NameError (undefined local variable or method `empty' for #<SongsController:0x7f54492e77b0>):
+  app/controllers/songs_controller.rb:7:in `view'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:43:06) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = '554') [0m
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+
+NameError (undefined local variable or method `null' for #<SongsController:0x7f544911e820>):
+  app/controllers/songs_controller.rb:7:in `view'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:58:33) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (1.0ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 554) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://ubuntuserver/songs/view/554]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 01:58:59) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 554) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.9ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://ubuntuserver/songs/view/554]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:01:04) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 554) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://ubuntuserver/songs/view/554]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:01:16) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 554) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.9ms)
+Rendered layouts/_sidebar (1.0ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://ubuntuserver/songs/view/554]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:01:22) [GET]
+  Parameters: {"id"=>"554"}
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 554) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://ubuntuserver/songs/view/554]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:01:43) [GET]
+  Parameters: {"artist"=>"Cafe del Mar"}
+  [4;36;1mSong Load (20.0ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Cafe del Mar') [0m
+  [4;35;1mSong Load (9.6ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Cafe del Mar') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (4.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 52ms (View: 16, DB: 31) | 200 OK [http://ubuntuserver/artist/view?artist=Cafe+del+Mar]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:01:49) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (3.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:01:55) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (5.0ms)
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.7ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#index (for 192.168.120.1 at 2010-05-03 02:01:57) [GET]
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT album,artist FROM `songs` GROUP BY album ORDER BY album LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all, album AS album FROM `songs` GROUP BY album [0m
+Rendering template within layouts/application
+Rendering album/index
+Rendered artist/_album_info (2.0ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.5ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (1.1ms)
+Rendered artist/_album_info (1.0ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (1.1ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.9ms)
+Rendered artist/_album_info (1.0ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.6ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.3ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 60ms (View: 48, DB: 1) | 200 OK [http://ubuntuserver/album]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:02:03) [GET]
+  Parameters: {"album"=>"20th Anniversary"}
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = '20th Anniversary') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.0ms)
+Rendered layouts/_stylesheets (0.8ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=20th+Anniversary]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:02:09) [GET]
+  Parameters: {"artist"=>"Cafe del Mar"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Cafe del Mar') [0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Cafe del Mar') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.3ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (66.5ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 79ms (View: 74, DB: 1) | 200 OK [http://ubuntuserver/artist/view?artist=Cafe+del+Mar]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#index (for 192.168.120.1 at 2010-05-03 02:02:14) [GET]
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT album,artist FROM `songs` GROUP BY album ORDER BY album LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all, album AS album FROM `songs` GROUP BY album [0m
+Rendering template within layouts/application
+Rendering album/index
+Rendered artist/_album_info (2.4ms)
+Rendered artist/_album_info (0.9ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (1.1ms)
+Rendered artist/_album_info (1.2ms)
+Rendered artist/_album_info (1.1ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (3.3ms)
+Rendered artist/_album_info (1.3ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.5ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (1.4ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.9ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (1.3ms)
+Rendered artist/_album_info (0.5ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (1.2ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.8ms)
+Rendered artist/_album_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 71ms (View: 58, DB: 1) | 200 OK [http://ubuntuserver/album]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:02:17) [GET]
+  Parameters: {"album"=>"Beaucoup Fish"}
+  [4;36;1mSong Load (8.8ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = 'Beaucoup Fish') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (3.5ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 30ms (View: 16, DB: 10) | 200 OK [http://ubuntuserver/album/view?album=Beaucoup+Fish]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:02:22) [GET]
+  Parameters: {"id"=>"4723"}
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (0.8ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 4723) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.4ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 4, DB: 2) | 200 OK [http://ubuntuserver/songs/view/4723]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:02:31) [GET]
+  Parameters: {"artist"=>"Underworld"}
+  [4;36;1mSong Load (9.3ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') [0m
+  [4;35;1mSong Load (8.4ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 49ms (View: 25, DB: 18) | 200 OK [http://ubuntuserver/artist/view?artist=Underworld]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:05:02) [GET]
+  Parameters: {"artist"=>"Underworld"}
+  [4;35;1mSong Load (10.5ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') ORDER BY album,track[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (4.2ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.6ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 41ms (View: 25, DB: 11) | 200 OK [http://ubuntuserver/artist/view?artist=Underworld]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:05:47) [GET]
+  Parameters: {"artist"=>"Underworld"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') ORDER BY album,track[0m
+  [4;35;1mSong Load (0.1ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.5ms)
+Rendered artist/_album_info (0.6ms)
+Rendered artist/_album_info (0.5ms)
+Rendered layouts/_song_info (2.2ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://ubuntuserver/artist/view?artist=Underworld]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:06:57) [GET]
+  Parameters: {"artist"=>"Underworld"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') ORDER BY album,track[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Underworld') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;35;1mSong Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (4.5ms)
+Rendered artist/_album_info (0.7ms)
+Rendered artist/_album_info (0.7ms)
+Rendered layouts/_song_info (2.3ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 37ms (View: 30, DB: 2) | 200 OK [http://ubuntuserver/artist/view?artist=Underworld]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:07:10) [GET]
+  Parameters: {"album"=>"Trainspotting"}
+  [4;36;1mSong Load (9.0ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = 'Trainspotting') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.4ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 38ms (View: 24, DB: 10) | 200 OK [http://ubuntuserver/album/view?album=Trainspotting]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:07:31) [GET]
+  Parameters: {"id"=>"4793"}
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`id` = 4793) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4793]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:07:42) [GET]
+  Parameters: {"artist"=>"Leftfield"}
+  [4;36;1mSong Load (10.0ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Leftfield') ORDER BY album,track[0m
+  [4;35;1mSong Load (8.3ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Leftfield') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.9ms)
+Rendered artist/_album_info (0.6ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (2.3ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 101ms (View: 12, DB: 19) | 200 OK [http://ubuntuserver/artist/view?artist=Leftfield]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:08:49) [GET]
+  Parameters: {"album"=>"Trainspotting"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = 'Trainspotting') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.6ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=Trainspotting]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:08:52) [GET]
+  Parameters: {"id"=>"4795"}
+  [4;35;1mSong Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4795) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.2ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4795]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:09:03) [GET]
+  Parameters: {"id"=>"4795"}
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4795) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4795]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:15:43) [GET]
+  Parameters: {"id"=>"4795"}
+  [4;35;1mSong Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4795) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.5ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4795]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:16:31) [GET]
+  Parameters: {"id"=>"4795"}
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4795) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4795]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#index (for 192.168.120.1 at 2010-05-03 02:16:55) [GET]
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM `songs` ORDER BY title LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `songs` [0m
+Rendering template within layouts/application
+Rendering songs/index
+Rendered layouts/_song_info (2.5ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.5ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.7ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.9ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 70ms (View: 62, DB: 1) | 200 OK [http://ubuntuserver/songs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:17:00) [GET]
+  Parameters: {"album"=>" Now That's What I Call Christmas 3 "}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`album` = ' Now That\'s What I Call Christmas 3 ') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (4.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.2ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.2ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 37ms (View: 29, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=+Now+That%27s+What+I+Call+Christmas+3+]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:17:03) [GET]
+  Parameters: {"artist"=>"VA"}
+  [4;36;1mSong Load (10.7ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'VA') ORDER BY album,track[0m
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'VA') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.6ms)
+Rendered artist/_album_info (0.7ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.3ms)
+Rendered layouts/_song_info (2.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 63ms (View: 46, DB: 12) | 200 OK [http://ubuntuserver/artist/view?artist=VA]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumController#view (for 192.168.120.1 at 2010-05-03 02:17:07) [GET]
+  Parameters: {"album"=>"Now That's What I Call Christmas 3 "}
+  [4;35;1mSong Load (0.4ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`album` = 'Now That\'s What I Call Christmas 3 ') [0m
+Rendering template within layouts/application
+Rendering album/view
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered layouts/_song_info (3.6ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.9ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (0.8ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://ubuntuserver/album/view?album=Now+That%27s+What+I+Call+Christmas+3+]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:17:12) [GET]
+  Parameters: {"id"=>"2570"}
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.6ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 2570) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.4ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://ubuntuserver/songs/view/2570]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#index (for 192.168.120.1 at 2010-05-03 02:17:29) [GET]
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT artist FROM `songs` GROUP BY artist ORDER BY artist LIMIT 0, 50[0m
+  [4;36;1mSong Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all, artist AS artist FROM `songs` GROUP BY artist [0m
+Rendering template within layouts/application
+Rendering artist/index
+Rendered artist/_artists (2.0ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.8ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.7ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (1.1ms)
+Rendered artist/_artists (1.6ms)
+Rendered artist/_artists (0.4ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered artist/_artists (0.3ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 52ms (View: 36, DB: 1) | 200 OK [http://ubuntuserver/artist]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArtistController#view (for 192.168.120.1 at 2010-05-03 02:17:37) [GET]
+  Parameters: {"artist"=>"Bill Withers"}
+  [4;36;1mSong Load (9.3ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Bill Withers') ORDER BY album,track[0m
+  [4;35;1mSong Load (8.3ms)[0m   [0mSELECT * FROM `songs` WHERE (`songs`.`artist` = 'Bill Withers') GROUP BY album[0m
+Rendering template within layouts/application
+Rendering artist/view
+  [4;36;1mSong Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `songs`[0m
+Rendered artist/_album_info (3.2ms)
+Rendered layouts/_song_info (1.1ms)
+Rendered layouts/_song_info (1.0ms)
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.6ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 35ms (View: 11, DB: 18) | 200 OK [http://ubuntuserver/artist/view?artist=Bill+Withers]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:17:42) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.5ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:36:12) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 192ms (View: 183, DB: 2) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:36:48) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:36:52) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.4ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:37:43) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+
+ActionView::TemplateError (No such file or directory - /mnt/gizmo/mp3/Steve/The Rolling Stone Magazines 500 Greatest Songs Of All Time/280 - Bill Withers - Ain't No Sunshine.mp3) on line #26 of app/views/songs/view.html.erb:
+23:     <tr><td>ALBUM</td><td><%= @show_song.album %></td></tr>
+24:     <tr><td>ARTIST</td><td><%= @show_song.artist %></td></tr>
+25:     <tr><td>PATH</td><td><%= @show_song.path %></td></tr>
+26:     <tr><td>READABLE</td><td><%= File.stat(@show_song.path).readable? %></td></tr>
+27:   </tbody>
+28: </table>
+
+    app/views/songs/view.html.erb:26:in `stat'
+    app/views/songs/view.html.erb:26
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:38:55) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_sidebar (0.6ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 02:39:12) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 03:00:15) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.6ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 97ms (View: 16, DB: 2) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 03:01:57) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_sidebar (0.8ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4185]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SongsController#view (for 192.168.120.1 at 2010-05-03 03:02:04) [GET]
+  Parameters: {"id"=>"4185"}
+  [4;35;1mSong Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `songs`[0m
+  [4;36;1mSong Load (0.1ms)[0m   [0;1mSELECT * FROM `songs` WHERE (`songs`.`id` = 4185) [0m
+Rendering template within layouts/application
+Rendering songs/view
+Rendered layouts/_stylesheets (0.3ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_sidebar (0.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://ubuntuserver/songs/view/4185]

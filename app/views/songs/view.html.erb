@@ -1,6 +1,28 @@
 <h1>Songs#view</h1>
 <p>Find me in app/views/songs/view.html.erb</p>
-<br>
-Viewing info for song - <%= @show_song %>
-</br>
+<br> Viewing info for song - <%= @show_song.title %> </br>
 
+<p>
+<table align=center border=1 summary="Song: <%= @show_song.title %>" >
+  <caption>Song information</caption>
+  <thead>
+    <tr>
+      <th>Meta</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="6">Table Footer, so this is.</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr><td>ID#</td><td><%= @show_song.id %></td></tr>
+    <tr><td>TRACK#</td><td><%= @show_song.track %></td></tr>
+    <tr><td>TITLE</td><td><%= @show_song.title %></td></tr>
+    <tr><td>ALBUM</td><td><%= @show_song.album %></td></tr>
+    <tr><td>ARTIST</td><td><%= @show_song.artist %></td></tr>
+    <tr><td>PATH</td><td><%= @show_song.path %></td></tr>
+    <tr><td>EXISTS</td><td><%= File.exist?(@show_song.path) %></td></tr>
+  </tbody>
+</table>

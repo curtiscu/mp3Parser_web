@@ -1,7 +1,8 @@
   <tr>
-    <th scope="col"><%= song.id %></th>
+    <td><%= link_to song.id, :controller => "songs", :action => "view", :id => song.id %></td>
+        
     <td><%= song.track %></td>
-    <td><%= link_to song.title, :controller => "songs", :action => "view", :title => song.title %></td>
+    <td><%= song.title %></td>
     <td><%= link_to song.album, :controller => "album", :action => "view", :album => song.album %></td>
 
     <td><%= link_to song.artist, :controller => "artist", :action => "view", :artist => song.artist %></td>
